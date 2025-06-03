@@ -47,14 +47,6 @@
         "telefone": "(81) 91234-5678"
     },
     {
-        "nome": "Accenture",
-        "cnpj": "12.345.678/0001-90",
-        "endereco": "Avenida Alfredo Lisboa, 12",
-        "email": "accenture@gmail.com",
-        "telefone": "(81) 91234-5678",
-        "senha": "123"
-    },
-    {
         "nome": "Neurotech",
         "cnpj": "98.765.432/0001-10",
         "endereco": "Rua do Apolo, 81",
@@ -84,5 +76,13 @@
         "endereco": "Rua Arn\u00f3bio Marques, 253",
         "email": "bluetechnology@gmail.com",
         "telefone": "(81) 95566-7788"
+    },
+    {
+        "nome": "moura dubeux",
+        "cnpj": "13.123.124/1221-31",
+        "endereco": "rua amelia ",
+        "email": "dubeux@gmail.com",
+        "telefone": "(12) 31231-2312",
+        "senha": "123"
     }
 ]
