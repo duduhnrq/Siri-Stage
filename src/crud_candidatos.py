@@ -27,3 +27,35 @@ def obter_candidato_por_indice(indice): # Obtém um candidato específico pelo �
     candidatos = carregar_candidatos() # Carrega os candidatos existentes
     if 0 <= indice < len(candidatos): # Verifica se o índice está dentro do intervalo válido
         return candidatos[indice] # Retorna o candidato correspondente ao índice
+    
+    
+    
+def atualizar_candidato(indice, candidato_atualizado): # Atualiza um candidato existente pelo índice
+    candidatos = carregar_candidatos() # Carrega os candidatos existentes
+    if 0 <= indice < len(candidatos): # Verifica se o índice está dentro do intervalo válido
+        candidatos[indice] = candidato_atualizado # Atualiza o candidato no índice especificado
+        salvar_candidatos(candidatos) # Salva as alterações
+        return True
+    return False
+
+def remover_candidato(indice): # Remove um candidato existente pelo índice
+    candidatos = carregar_candidatos() # Carrega os candidatos existentes
+    if 0 <= indice < len(candidatos): # Verifica se o índice está dentro do intervalo válido
+        candidatos.pop(indice) # Remove o candidato no índice especificado
+        salvar_candidatos(candidatos) # Salva as alterações
+        return True
+    return False
+
+def obter_candidato_mais_recente(): # Obtém o candidato mais recente
+    candidatos = carregar_candidatos() # Carrega os candidatos existentes
+    if candidatos: # Verifica se há candidatos cadastrados
+        return candidatos[-1] # Retorna o último candidato da lista
+    return None
+
+def editar_candidato(novos_dados): # Edita os dados do último candidato cadastrado
+    candidatos = carregar_candidatos() # Carrega os candidatos existentes
+    if candidatos: # Verifica se há candidatos cadastrados
+        candidatos[-1] = novos_dados # Atualiza o último candidato cadastrado
+        salvar_candidatos(candidatos) # Salva as alterações
+        return True
+    return False
