@@ -76,13 +76,5 @@
         "endereco": "Rua Arn\u00f3bio Marques, 253",
         "email": "bluetechnology@gmail.com",
         "telefone": "(81) 95566-7788"
-    },
-    {
-        "nome": "moura dubeux",
-        "cnpj": "13.123.124/1221-31",
-        "endereco": "rua amelia ",
-        "email": "dubeux@gmail.com",
-        "telefone": "(12) 31231-2312",
-        "senha": "123"
     }
 ]
