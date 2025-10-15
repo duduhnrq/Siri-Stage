@@ -55,7 +55,7 @@
     <script>
         document.getElementById("delete-candidate-btn").addEventListener("click", function() {
             if (confirm("Tem certeza de que deseja excluir seu perfil?")) {
-                fetch("/excluir-candidato", {
+                fetch("{{ url_for('excluir_candidato') }}", {
                     method: "POST"
                 })
                 .then(response => response.json())

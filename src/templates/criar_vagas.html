@@ -73,7 +73,7 @@
                 salario: document.getElementById("salario").value
             };
 
-            fetch("/criar-vaga", {
+            fetch("{{ url_for('criar_vaga') }}", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
