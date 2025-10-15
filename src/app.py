@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, jsonify, redirect
+import os
 from crud_candidatos import adicionar_candidato, carregar_candidatos, remover_candidato, editar_candidato
 from crud_empresas import adicionar_empresa, carregar_empresas, remover_empresa, editar_empresa
 from crud_vagas import adicionar_vaga, carregar_vagas, remover_vaga, editar_vaga
@@ -204,5 +205,6 @@ def editar_vaga_view(vaga_id):
 
     return render_template('editar_vaga.html', vaga=vaga)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
