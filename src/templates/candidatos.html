@@ -124,7 +124,7 @@
                     alert(data.erro);
                 } else {
                     alert(data.mensagem);
-                    window.location.href = "{{ url_for('vagas') }}";
+                    window.location.href = "{{ url_for('listar_vagas') }}";
                 }
             })
             .catch(error => {

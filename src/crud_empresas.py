@@ -11,7 +11,8 @@ def carregar_empresas():
     with open(CAMINHO, "r") as arquivo: 
         return json.load(arquivo) 
 
-def salvar_empresas(empresas): 
+def salvar_empresas(empresas):
+    os.makedirs("data", exist_ok=True) 
     with open(CAMINHO, "w") as arquivo: 
         json.dump(empresas, arquivo, indent=4) 
 
