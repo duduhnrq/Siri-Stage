@@ -4,7 +4,8 @@ import json
 import os
 import uuid
 
-CAMINHO = "data/vagas.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CAMINHO = os.path.join(BASE_DIR, "data", "vagas.json")
 
 def carregar_vagas():
     if not os.path.exists(CAMINHO): 
