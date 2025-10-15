@@ -126,7 +126,7 @@
                 senha: senha
             };
 
-            fetch("/cadastro-empresa", {
+            fetch("{{ url_for('cadastro_empresa') }}", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
