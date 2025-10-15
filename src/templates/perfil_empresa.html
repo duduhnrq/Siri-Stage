@@ -15,10 +15,10 @@
         <nav>
             <ul class="nav-menu">
                 <div class="nav-menu-left">
-                    <li><a href="/minhas-vagas" class="my-vacancies-btn">Minhas Vagas</a></li>
-                    <li><a href="/criar-vagas" class="create-vacancy-btn">Criar Vaga</a></li>
+                    <li><a href="{{ url_for('minhas_vagas') }}" class="my-vacancies-btn">Minhas Vagas</a></li>
+                    <li><a href="{{ url_for('vagas') }}" class="create-vacancy-btn">Criar Vaga</a></li>
                 </div>
-                <li><a href="/perfil-empresa" class="enterprise-profile"><img src="{{ url_for('static', filename='assets/icon-perfil.png') }}">Perfil da Empresa</a></li>
+                <li><a href="{{ url_for('perfil_empresa') }}" class="enterprise-profile"><img src="{{ url_for('static', filename='assets/icon-perfil.png') }}">Perfil da Empresa</a></li>
             </ul>
         </nav>
     </header>
@@ -69,7 +69,7 @@
                 .then(data => {
                     if (data.mensagem) {
                         alert(data.mensagem);
-                        window.location.href = "/";
+                        window.location.href = "{{ url_for('home') }}";
                     } else {
                         alert(data.error || "Erro ao excluir o perfil.");
                     }
@@ -82,7 +82,7 @@
         });
 
         document.getElementById("edit-enterprise-btn").addEventListener("click", function() {
-            window.location.href = "/editar-empresa";
+            window.location.href = "{{ url_for('editar_empresa_view') }}";
         });
     </script>
 </body>
