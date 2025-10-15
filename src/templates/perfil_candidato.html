@@ -14,8 +14,8 @@
         </div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="/vagas" class="create-vacancy-btn">Ver Vagas</a></li>
-                <li><a href="/perfil-candidato" class="enterprise-profile"><img src="{{ url_for('static', filename='assets/icon-perfil.png') }}">Perfil do Candidato</a></li>
+                <li><a href="{{ url_for('listar_vagas') }}" class="create-vacancy-btn">Ver Vagas</a></li>
+                <li><a href="{{ url_for('perfil_candidato') }}" class="enterprise-profile"><img src="{{ url_for('static', filename='assets/icon-perfil.png') }}">Perfil do Candidato</a></li>
             </ul>
         </nav>
     </header>
@@ -62,7 +62,7 @@
                 .then(data => {
                     if (data.mensagem) {
                         alert(data.mensagem);
-                        window.location.href = "/";
+                        window.location.href = "{{ url_for('home') }}";
                     } else {
                         alert(data.error || "Erro ao excluir o perfil.");
                     }
@@ -75,7 +75,7 @@
         });
 
         document.querySelector(".edit-candidate-btn").addEventListener("click", function() {
-            window.location.href = "/editar-candidato";
+            window.location.href = "{{ url_for('editar_candidato_view') }}";
         });
     </script>
 </body>

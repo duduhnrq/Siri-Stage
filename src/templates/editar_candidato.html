@@ -14,8 +14,8 @@
         </div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="/vagas" class="create-vacancy-btn">Ver Vagas</a></li>
-                <li><a href="/perfil-candidato" class="enterprise-profile"><img src="{{ url_for('static', filename='assets/icon-perfil.png') }}">Perfil do Candidato</a></li>
+                <li><a href="{{ url_for('listar_vagas') }}" class="create-vacancy-btn">Ver Vagas</a></li>
+                <li><a href="{{ url_for('perfil_candidato') }}" class="enterprise-profile"><img src="{{ url_for('static', filename='assets/icon-perfil.png') }}">Perfil do Candidato</a></li>
             </ul>
         </nav>
     </header>

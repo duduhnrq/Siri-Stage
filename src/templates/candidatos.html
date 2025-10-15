@@ -11,7 +11,7 @@
     <div class="left-container" id="left-container-form-page">
         <div class="header">
             <div class="logo">
-                <a href="http://127.0.0.1:5000/">
+                <a href="{{ url_for('home') }}">
                     <img src="{{ url_for('static', filename='assets/siristage_logo.png') }}" alt="SiriStage Logo">
                 </a>
             </div>
@@ -71,7 +71,7 @@
         </form>
 
         <div class="back-btn">
-            <a href="http://127.0.0.1:5000/">
+            <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='assets/left-arrow.png') }}" alt="">
                 <span>Voltar</span>
             </a>
@@ -124,7 +124,7 @@
                     alert(data.erro);
                 } else {
                     alert(data.mensagem);
-                    window.location.href = "vagas";
+                    window.location.href = "{{ url_for('vagas') }}";
                 }
             })
             .catch(error => {
