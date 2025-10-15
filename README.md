@@ -45,6 +45,10 @@ Siri-Stage/
 └── .gitignore                # Arquivos e pastas ignorados pelo Git
 ```
 
+## 🌐 Live Preview
+
+[🔗 SiriStage | Vagas de Estágio](https://siri-stage.onrender.com)
+
 ## 💻 Como Rodar o Projeto
 
 1. Clone o repositório:
