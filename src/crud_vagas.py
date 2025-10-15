@@ -13,6 +13,7 @@ def carregar_vagas():
         return json.load(arquivo)
 
 def salvar_vagas(vagas): 
+    os.makedirs("data", exist_ok=True) 
     with open(CAMINHO, "w") as arquivo: 
         json.dump(vagas, arquivo, indent=4) 
 
