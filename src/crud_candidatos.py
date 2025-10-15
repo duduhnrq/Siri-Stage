@@ -11,7 +11,8 @@ def carregar_candidatos():
     with open(CAMINHO, "r") as arquivo: 
         return json.load(arquivo) 
 
-def salvar_candidatos(candidatos): 
+def salvar_candidatos(candidatos):
+    os.makedirs("data", exist_ok=True) 
     with open(CAMINHO, "w") as arquivo: 
         json.dump(candidatos, arquivo, indent=4) 
 
@@ -26,9 +27,7 @@ def listar_candidatos():
 def obter_candidato_por_indice(indice): 
     candidatos = carregar_candidatos() 
     if 0 <= indice < len(candidatos):
-        return candidatos[indice] 
-    
-    
+        return candidatos[indice]
     
 def atualizar_candidato(indice, candidato_atualizado): 
     candidatos = carregar_candidatos() 
