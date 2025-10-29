@@ -54,7 +54,7 @@ Siri-Stage/
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/SiriStage.git
+git clone https://github.com/duduhnrq/SiriStage.git
 ```
 
 2. Acesse a pasta do projeto:
